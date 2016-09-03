@@ -1484,10 +1484,10 @@ void lua_do_all (void) {
       tgl_do_channel_get_members (TLS, lua_ptr[p + 1].peer_id, 5000, 0, 3, lua_contact_list_cb, lua_ptr[p].ptr);
       p += 2;
       break;
-    case lq_channel_unblock:
-      tgl_do_channel_set_admin (TLS, lua_ptr[p + 1].peer_id, lua_ptr[p + 2].peer_id, 0, lua_empty_cb, lua_ptr[p].ptr);
-      p += 3;
-      break;
+    //case lq_channel_unblock:
+      //tgl_do_channel_set_admin (TLS, lua_ptr[p + 1].peer_id, lua_ptr[p + 2].peer_id, 0, lua_empty_cb, lua_ptr[p].ptr);
+      //p += 3;
+      //break;
     case lq_rename_channel:
       tgl_do_rename_channel (TLS, lua_ptr[p + 1].peer_id, LUA_STR_ARG (p + 2), lua_empty_cb, lua_ptr[p].ptr);
       p += 3;
